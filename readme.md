@@ -1,5 +1,6 @@
-Added 
+Chat : https://chatgpt.com/c/6892763f-a2ac-832d-aa8a-6ea60fabedd7
 
+Added
 1. gradle.properties - To overcome warnings
 
    WARNING: A restricted method in java.lang.System has been called
@@ -38,6 +39,14 @@ Adding to git hub
 
    command: git remote add origin https://github.com/laxmankishore/GenAIRAGChatbot.git
 
+
+Deploying workflow after adding secret keys in Git repo
+
+`git add .`
+
+`git commit -m "Adding deploy workflow"`
+
+`git push origin main`
 
 
 
