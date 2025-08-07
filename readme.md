@@ -49,4 +49,11 @@ Deploying workflow after adding secret keys in Git repo
 `git push origin main`
 
 
+Error:
 
+`I/O error for image [registry-1.docker.io/library/eclipse-temurin]:
+org.apache.http.ConnectionClosedException
+Premature end of Content-Length delimited message body (expected: 29,721,175; received: 28,268,994)
+`
+
+✅ Yes. Jib uses eclipse-temurin (formerly AdoptOpenJDK) as the default base image — unless you explicitly override it.
