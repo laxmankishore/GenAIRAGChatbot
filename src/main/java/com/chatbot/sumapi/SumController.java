@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.HashMap;
 
 @RestController
-@CrossOrigin(origins = "https://genairagchatbot-frontend.s3.us-east-2.amazonaws.com")
+@CrossOrigin(origins = "http://genairagchatbot-frontend.s3.us-east-2.amazonaws.com")
 public class SumController {
 
     private final SumService sumService;
