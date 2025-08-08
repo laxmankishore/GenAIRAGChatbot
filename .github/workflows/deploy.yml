@@ -7,7 +7,7 @@ on:
 env:
   AWS_REGION: us-east-2  # Change to your AWS Region
   ECR_REPO: genairagchatbot
-  ECS_CLUSTER: genairagchatbot-cluster
+  ECS_CLUSTER: genairagchatbot-ec2-cluster
   ECS_SERVICE: genairagchatbot-service
 
 jobs:

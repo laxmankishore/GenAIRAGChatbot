@@ -206,6 +206,37 @@ Enabled via:
 ---
 
 
+## 🧭 Why We Use ECS with EC2 (Instead of Fargate)
+
+To reduce costs and gain more control over the infrastructure, we use **Amazon ECS with EC2 launch type** instead of **Fargate**. Here's why:
+
+### ✅ Cost Efficiency
+| Launch Type | Free Tier Eligible | Notes |
+|-------------|--------------------|-------|
+| **Fargate** | ❌ No               | Billed per second for vCPU and RAM |
+| **EC2**     | ✅ Yes              | 750 hours/month for `t2.micro` or `t3.micro` under AWS Free Tier |
+
+Using ECS with EC2 helps us stay within the AWS Free Tier, which significantly reduces development and testing costs.
+
+### 🔧 Infrastructure Control
+- Full access to EC2 instances (via SSH)
+- Can run multiple containers per instance
+- Greater flexibility for monitoring, logging, and customization
+
+### 🚀 Orchestration with ECS
+- ECS handles task scheduling, service management, and deployments
+- EC2 just serves as the container host
+- This setup balances automation with control
+
+### 📦 Reusable and Scalable
+- Multiple services can share a single EC2 instance
+- No per-container billing as in Fargate
+- Easy to scale up later by adding instances or enabling auto-scaling
+
+---
+
+**Summary:**  
+We chose ECS + EC2 for its **free-tier eligibility**, **cost-effectiveness**, and **flexibility**, while still benefiting from ECS's powerful orchestration features.
 
 
 
